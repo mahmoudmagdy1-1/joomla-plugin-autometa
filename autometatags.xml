@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="5.0" type="plugin" group="content" method="upgrade">
+    <name>plg_content_autometatags</name>
+    <author>Mahmoud Magdy</author>
+    <creationDate>May 2025</creationDate>
+    <copyright>Copyright (C) 2025 All rights reserved.</copyright>
+    <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+    <authorEmail>mahmoudmagdy.dev.0@gmail.com</authorEmail>
+    <authorUrl>mahmoudmagdy.dev</authorUrl>
+    <version>1.0.0</version>
+    <description>PLG_CONTENT_AUTOMETATAGS_XML_DESCRIPTION</description>
+    <namespace path="src">Joomla\Plugin\Content\AutoMetaTags</namespace>
+
+    <files>
+		<folder plugin="autometatags">services</folder>
+        <folder>src</folder>
+    </files>
+
+    <languages folder="language">
+        <language tag="en-GB">en-GB/en-GB.plg_content_autometatags.ini</language>
+        <language tag="en-GB">en-GB/en-GB.plg_content_autometatags.sys.ini</language>
+    </languages>
+
+    <config>
+        <fields name="params">
+            <fieldset name="basic" label="PLG_CONTENT_AUTOMETATAGS_BASIC_SETTINGS_LABEL">
+
+                <field
+                    name="metadesc_length"
+                    type="number"
+                    default="155"
+                    label="PLG_CONTENT_AUTOMETATAGS_DESC_LENGTH_LABEL"
+                    description="PLG_CONTENT_AUTOMETATAGS_DESC_LENGTH_DESC"
+                    min="50"
+                    max="300"
+                    step="5"
+                />
+
+                <field
+                    name="max_keywords_count"
+                    type="number"
+                    default="7"
+                    label="PLG_CONTENT_AUTOMETATAGS_MAX_KEYWORDS_LABEL"
+                    description="PLG_CONTENT_AUTOMETATAGS_MAX_KEYWORDS_DESC"
+                    min="1"
+                    max="20"
+                    step="1"
+                />
+
+                <field
+                    name="min_keyword_length"
+                    type="number"
+                    default="3"
+                    label="PLG_CONTENT_AUTOMETATAGS_MIN_KEYWORD_LENGTH_LABEL"
+                    description="PLG_CONTENT_AUTOMETATAGS_MIN_KEYWORD_LENGTH_DESC"
+                    min="2"
+                    max="10"
+                    step="1"
+                />
+
+                <field
+                    name="stop_words"
+                    type="textarea"
+                    label="PLG_CONTENT_AUTOMETATAGS_STOP_WORDS_LABEL"
+                    description="PLG_CONTENT_AUTOMETATAGS_STOP_WORDS_DESC"
+                    rows="5"
+                    cols="40"
+                    default="a, an, and, are, as, at, be, by, for, from, has, he, in, is, it, its, of, on, that, the, to, was, were, will, with, i, you, me, my, we, our, they, them, their, this, these, those, then, than, so, if, or, but, not"
+                    filter="string"
+                />
+
+            </fieldset>
+        </fields>
+    </config>
+</extension>
